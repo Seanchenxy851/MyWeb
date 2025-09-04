@@ -1,0 +1,32 @@
+.nav {
+  position: fixed;           /* sticks to top even on zoom or scroll */
+  top: 0;
+  left: 0;
+  width: 100%;               /* always spans the screen width */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;           /* allows items to wrap on small widths */
+  gap: 1.5rem;
+  background-color: rgba(0,0,0,0.7);
+  padding: 0.75rem 1rem;
+  box-sizing: border-box;    /* includes padding in width */
+  z-index: 0;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s, transform 0.3s;
+  font-size: clamp(14px, 1.2vw, 18px); /* scales between min and max */
+}
+
+.nav a:hover {
+  color: #ffcc00;
+  transform: translateY(-2px);
+}
+
+
+html {
+  scroll-behavior: smooth;
+}

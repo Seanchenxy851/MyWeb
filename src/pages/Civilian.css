@@ -1,0 +1,59 @@
+.civilian-page {
+  min-height: 100vh;
+  padding: clamp(1rem, 2vw, 3rem); /* scales padding */
+  color: #fff;
+  background-color: #1a1a1a; /* dark background */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bio-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 4rem); /* scales spacing */
+}
+
+.bio-section h1 {
+  font-size: clamp(2rem, 5vw, 3rem); /* headline scales */
+  margin-bottom: clamp(1rem, 2vw, 2rem);
+}
+
+.bio-section p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem); /* paragraph scales */
+  max-width: 90%;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.gallery-section h2 {
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* smaller min for scaling */
+  gap: clamp(1rem, 2vw, 2rem); /* scales gap between images */
+  width: 100%;
+  max-width: 1200px; /* optional container max width */
+  padding: 0 clamp(1rem, 2vw, 2rem);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: clamp(8px, 1vw, 12px); /* scales border radius */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
